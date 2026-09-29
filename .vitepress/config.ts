@@ -1,28 +1,39 @@
 import { defineConfig } from 'vitepress'
 
-// https://vitepress.dev/reference/site-config
 export default defineConfig({
-  title: "blog",
-  description: "A VitePress Site",
-  themeConfig: {
-    // https://vitepress.dev/reference/default-theme-config
-    nav: [
-      { text: 'Home', link: '/' },
-      { text: 'Examples', link: '/markdown-examples' }
+  lang: 'zh-CN',
+  title: '拾光札记',
+  description: '关于技术、设计与生活的个人博客',
+  cleanUrls: true,
+  lastUpdated: true,
+  head: [
+    ['meta', { name: 'theme-color', content: '#f7f5ef' }],
+    ['meta', { name: 'color-scheme', content: 'light dark' }],
+    ['link', { rel: 'preconnect', href: 'https://fonts.googleapis.com' }],
+    [
+      'link',
+      {
+        rel: 'stylesheet',
+        href: 'https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Noto+Sans+SC:wght@400;500;600;700&family=Noto+Serif+SC:wght@600;700;900&display=swap',
+      },
     ],
-
+  ],
+  themeConfig: {
+    nav: [
+      { text: '首页', link: '/' },
+      { text: '文章', link: '/markdown-examples' },
+      { text: '实验室', link: '/api-examples' },
+      { text: '关于', link: '/about' },
+    ],
     sidebar: [
       {
-        text: 'Examples',
+        text: '开始阅读',
         items: [
-          { text: 'Markdown Examples', link: '/markdown-examples' },
-          { text: 'Runtime API Examples', link: '/api-examples' }
-        ]
-      }
+          { text: 'Markdown 排版指南', link: '/markdown-examples' },
+          { text: 'VitePress 实验室', link: '/api-examples' },
+          { text: '关于这个博客', link: '/about' },
+        ],
+      },
     ],
-
-    socialLinks: [
-      { icon: 'github', link: 'https://github.com/vuejs/vitepress' }
-    ]
-  }
+  },
 })

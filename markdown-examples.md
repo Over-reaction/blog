@@ -1,12 +1,31 @@
-# Markdown Extension Examples
+---
+title: Markdown 排版指南
+description: 在这个博客中写出结构清晰、阅读舒适的文章。
+category: 写作体验
+date: 2026-09-29
+readingTime: 约 4 分钟
+---
 
-This page demonstrates some of the built-in markdown extensions provided by VitePress.
+# Markdown 排版指南
 
-## Syntax Highlighting
+好的内容值得被认真呈现。这篇文章也是主题的排版预览：标题、列表、引用和代码，在浅色与深色模式下都经过了专门设计。
 
-VitePress provides Syntax Highlighting powered by [Shiki](https://github.com/shikijs/shiki), with additional features like line-highlighting:
+## 从清晰的结构开始
 
-**Input**
+一篇易读的文章，通常拥有明确的标题层级。一级标题说明主题，二级标题拆分观点，三级标题则用来解释更具体的细节。
+
+### 一些写作建议
+
+- 每一段只讨论一个中心意思
+- 用小标题为长文章建立路标
+- 示例尽可能具体，结论尽可能简洁
+- 重要内容可以使用 **粗体**，但不要让整页都变成重点
+
+> 写作不是把知道的东西全部倒出来，而是替读者安排一条舒服的理解路径。
+
+## 代码与语法高亮
+
+VitePress 使用 Shiki 提供代码高亮，也支持强调指定代码行：
 
 ````md
 ```js{4}
@@ -20,8 +39,6 @@ export default {
 ```
 ````
 
-**Output**
-
 ```js{4}
 export default {
   data () {
@@ -32,54 +49,36 @@ export default {
 }
 ```
 
-## Custom Containers
+## 信息容器
 
-**Input**
+使用容器可以让补充信息从正文中自然地突出出来。
 
-```md
 ::: info
-This is an info box.
+这是一条帮助读者理解上下文的补充信息。
 :::
 
 ::: tip
-This is a tip.
+把最实用、最值得马上尝试的建议放在这里。
 :::
 
 ::: warning
-This is a warning.
-:::
-
-::: danger
-This is a dangerous warning.
+这一步可能产生意料之外的结果，操作前请先确认。
 :::
 
 ::: details
-This is a details block.
-:::
-```
-
-**Output**
-
-::: info
-This is an info box.
+需要时点击展开不影响主线阅读的额外内容。
 :::
 
-::: tip
-This is a tip.
-:::
+## 表格
 
-::: warning
-This is a warning.
-:::
+表格适合展示需要横向比较的信息：
 
-::: danger
-This is a dangerous warning.
-:::
+| 元素 | 适合表达 | 使用建议 |
+| --- | --- | --- |
+| 标题 | 内容层级 | 保持简短 |
+| 引用 | 核心观点 | 一次一个重点 |
+| 代码块 | 技术示例 | 提供必要上下文 |
 
-::: details
-This is a details block.
-:::
+## 继续写下去
 
-## More
-
-Check out the documentation for the [full list of markdown extensions](https://vitepress.dev/guide/markdown).
+主题只是内容的容器。真正让博客逐渐变得独特的，是持续记录下来的经验、判断和好奇心。
