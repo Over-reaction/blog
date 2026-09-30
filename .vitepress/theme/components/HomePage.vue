@@ -36,8 +36,7 @@ defineProps<{
 
     <PagefindSearch />
 
-    <section class="mx-auto max-w-[70rem] border-t border-line px-6 py-14 sm:px-8 sm:py-18"
-      aria-labelledby="recent-posts-title">
+    <section class="mx-auto max-w-[70rem] px-6 sm:px-8" aria-labelledby="recent-posts-title">
       <!-- <div class="mb-7 flex items-end justify-between gap-6 sm:mb-9">
         <div>
           <p class="mb-2 text-xs font-semibold tracking-[0.12em] text-subtle uppercase">最新</p>

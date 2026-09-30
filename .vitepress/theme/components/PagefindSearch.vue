@@ -127,9 +127,9 @@ function resultUrl(url: string) {
 </script>
 
 <template>
-  <section class="mx-auto max-w-[70rem] px-6 pt-14 sm:px-8 sm:pt-18" aria-label="站内搜索">
-    <div class="border-y border-line py-8 sm:py-10">
-      <div class="mx-auto max-w-[52rem]">
+  <section class="mx-auto max-w-[70rem] px-6 sm:px-8" aria-label="站内搜索">
+    <div class="py-8 sm:py-10">
+      <div class="mx-auto">
         <form role="search" @submit.prevent="search">
           <label class="sr-only" for="pagefind-search-input">搜索全部文章</label>
           <div class="relative">
@@ -171,7 +171,7 @@ function resultUrl(url: string) {
                 </span>
               </span>
               <span
-                class="mt-1.5 block text-sm leading-6 text-muted [&_mark]:bg-transparent [&_mark]:font-semibold [&_mark]:text-ink"
+                class="mt-1.5 block text-sm leading-6 text-muted [&_mark]:bg-yellow-500 [&_mark]:px-0.5 [&_mark]:text-white"
                 v-html="result.excerpt" />
             </a>
           </li>
