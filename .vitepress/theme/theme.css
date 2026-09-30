@@ -1,0 +1,102 @@
+/*
+ * Blog theme tokens
+ *
+ * Change this block to retheme the whole site. Components only consume the
+ * semantic Tailwind colors below (canvas, surface, ink, muted, accent...).
+ */
+:root {
+  --blog-canvas: #ffffff;
+  --blog-surface: #f6f6f4;
+  --blog-surface-hover: #efefec;
+  --blog-ink: #181818;
+  --blog-muted: #606060;
+  --blog-subtle: #8a8a8a;
+  --blog-line: #e7e7e4;
+  --blog-line-strong: #cfcfca;
+  --blog-accent: #0ae448;
+  --blog-code: #f4f4f1;
+  --blog-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans SC", "PingFang SC", "Microsoft YaHei", sans-serif;
+  --blog-mono: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+  color-scheme: light;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --blog-canvas: #111111;
+    --blog-surface: #191919;
+    --blog-surface-hover: #202020;
+    --blog-ink: #ededed;
+    --blog-muted: #a8a8a8;
+    --blog-subtle: #777777;
+    --blog-line: #292929;
+    --blog-line-strong: #414141;
+    --blog-accent: #0ae448;
+    --blog-code: #191919;
+    color-scheme: dark;
+  }
+}
+
+@theme inline {
+  --color-canvas: var(--blog-canvas);
+  --color-surface: var(--blog-surface);
+  --color-surface-hover: var(--blog-surface-hover);
+  --color-ink: var(--blog-ink);
+  --color-muted: var(--blog-muted);
+  --color-subtle: var(--blog-subtle);
+  --color-line: var(--blog-line);
+  --color-line-strong: var(--blog-line-strong);
+  --color-accent: var(--blog-accent);
+  --color-code: var(--blog-code);
+  --font-sans: var(--blog-sans);
+  --font-mono: var(--blog-mono);
+}
+
+@layer base {
+  * {
+    box-sizing: border-box;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 7.5rem;
+    background: var(--blog-canvas);
+  }
+
+  html.menu-open,
+  html.menu-open body {
+    overflow: hidden;
+  }
+
+  body {
+    @apply m-0 bg-canvas font-sans text-ink antialiased;
+    min-width: 320px;
+    font-size: 16px;
+    line-height: 1.7;
+    text-rendering: optimizeLegibility;
+  }
+
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+
+  button,
+  input {
+    color: inherit;
+    font: inherit;
+  }
+
+  button {
+    cursor: pointer;
+  }
+
+  ::selection {
+    background: var(--blog-accent);
+    color: #111111;
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--blog-accent);
+    outline-offset: 3px;
+  }
+}

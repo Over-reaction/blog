@@ -1,5 +1,5 @@
 import Layout from './Layout.vue'
-import './style.css'
+import './tailwindcss.css'
 
 export default {
   Layout,

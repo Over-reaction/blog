@@ -1,0 +1,168 @@
+/* Generated Markdown cannot carry utility classes, so its typography lives here. */
+@layer components {
+  .article-content h1 {
+    @apply mt-0 mb-10 font-semibold text-ink;
+    font-size: clamp(2.35rem, 7vw, 3.7rem);
+    line-height: 1.15;
+    letter-spacing: -0.055em;
+  }
+
+  .article-content h2 {
+    @apply mt-16 mb-5 pt-1 text-[1.75rem] leading-[1.3] font-semibold tracking-[-0.035em] text-ink;
+  }
+
+  .article-content h3 {
+    @apply mt-10 mb-4 text-[1.3125rem] leading-[1.4] font-semibold text-ink;
+  }
+
+  .article-content :is(h2, h3)[id] {
+    scroll-margin-top: 7.5rem;
+  }
+
+  .article-content p,
+  .article-content li {
+    @apply text-[1.0625rem] leading-[1.9] text-muted;
+  }
+
+  .article-content p {
+    @apply my-[1.125rem];
+  }
+
+  .article-content ul,
+  .article-content ol {
+    @apply my-[1.125rem] pl-[1.4em];
+  }
+
+  .article-content ul {
+    @apply list-disc;
+  }
+
+  .article-content ol {
+    @apply list-decimal;
+  }
+
+  .article-content li + li {
+    @apply mt-2;
+  }
+
+  .article-content strong {
+    @apply font-semibold text-ink;
+  }
+
+  .article-content a:not(.header-anchor) {
+    @apply text-ink underline decoration-line-strong underline-offset-4 transition-colors hover:decoration-ink;
+  }
+
+  .article-content .header-anchor {
+    @apply ml-2 font-normal text-subtle no-underline opacity-0 transition-opacity;
+  }
+
+  .article-content :is(h2, h3):hover .header-anchor,
+  .article-content .header-anchor:focus-visible {
+    @apply opacity-100;
+  }
+
+  .article-content blockquote {
+    @apply my-7 border-l-[3px] border-line-strong py-0.5 pl-5;
+  }
+
+  .article-content blockquote p {
+    @apply text-muted;
+  }
+
+  .article-content :not(pre) > code {
+    @apply rounded bg-code px-1.5 py-0.5 font-mono text-[0.86em] text-ink;
+  }
+
+  .article-content div[class*="language-"] {
+    @apply relative my-7 overflow-hidden rounded-lg border border-line bg-code;
+  }
+
+  .article-content pre {
+    @apply m-0 overflow-x-auto p-5;
+  }
+
+  .article-content pre code {
+    @apply font-mono text-[13px] leading-7;
+  }
+
+  .article-content .lang,
+  .article-content .copy {
+    @apply absolute top-2.5 right-3 font-mono text-[11px] text-subtle;
+  }
+
+  .article-content .copy {
+    @apply size-7 rounded-md border border-line bg-surface text-[0];
+  }
+
+  .article-content .copy::before {
+    font-size: 11px;
+    content: "复制";
+  }
+
+  .article-content .copy.copied::before {
+    content: "完成";
+  }
+
+  .article-content .highlighted {
+    background: color-mix(in srgb, var(--blog-accent) 12%, transparent);
+  }
+
+  .article-content table {
+    @apply my-7 block w-full overflow-x-auto border-collapse text-sm;
+  }
+
+  .article-content th,
+  .article-content td {
+    @apply min-w-30 border border-line px-3 py-2.5 text-left;
+  }
+
+  .article-content th {
+    @apply bg-surface font-semibold text-ink;
+  }
+
+  .article-content img {
+    @apply h-auto max-w-full rounded-lg;
+  }
+
+  .article-content hr {
+    @apply my-14 border-0 border-t border-line;
+  }
+
+  .article-content .custom-block {
+    @apply my-7 border-l-[3px] border-line-strong bg-surface px-5 py-4;
+  }
+
+  .article-content .custom-block-title {
+    @apply mt-0! mb-1.5! text-sm! font-semibold! text-ink!;
+  }
+
+  .article-content .custom-block p:last-child {
+    @apply mb-0;
+  }
+
+  .article-content .details {
+    @apply border border-line;
+    border-left-width: 1px;
+  }
+
+  .article-content .details summary {
+    @apply cursor-pointer font-semibold text-ink;
+  }
+
+  @media (max-width: 640px) {
+    .article-content h1 {
+      @apply mb-8;
+      font-size: clamp(2.25rem, 12vw, 3rem);
+    }
+
+    .article-content h2 {
+      @apply mt-12 text-2xl;
+    }
+
+    .article-content p,
+    .article-content li {
+      @apply text-base leading-[1.85];
+    }
+  }
+}

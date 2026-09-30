@@ -27,13 +27,13 @@ const { theme, page, frontmatter } = useData()
 
 下面的卡片直接读取当前页面数据。修改 frontmatter 后，内容也会随之更新。
 
-<div class="data-preview">
-  <span>站点名称</span>
-  <strong>{{ site.title }}</strong>
-  <span>页面标题</span>
-  <strong>{{ frontmatter.title }}</strong>
-  <span>当前路径</span>
-  <strong>{{ page.relativePath }}</strong>
+<div class="my-7 grid grid-cols-[7rem_1fr] border-t border-line [&>*]:border-b [&>*]:border-line [&>*]:px-2.5 [&>*]:py-3">
+  <span class="font-mono text-[11px] text-subtle">站点名称</span>
+  <strong class="text-[13px] font-medium">{{ site.title }}</strong>
+  <span class="font-mono text-[11px] text-subtle">页面标题</span>
+  <strong class="text-[13px] font-medium">{{ frontmatter.title }}</strong>
+  <span class="font-mono text-[11px] text-subtle">当前路径</span>
+  <strong class="text-[13px] font-medium">{{ page.relativePath }}</strong>
 </div>
 
 ## 使用场景
@@ -46,31 +46,6 @@ const { theme, page, frontmatter } = useData()
 ## 保持克制
 
 交互应该帮助读者理解内容，而不是分散注意力。对于个人博客来说，速度、可读性与内容本身始终更加重要。
-
-<style>
-.data-preview {
-  display: grid;
-  grid-template-columns: 110px 1fr;
-  margin: 28px 0;
-  border-top: 1px solid var(--border-strong);
-}
-
-.data-preview > * {
-  padding: 13px 10px;
-  border-bottom: 1px solid var(--border);
-}
-
-.data-preview span {
-  color: var(--text-faint);
-  font-family: var(--mono);
-  font-size: 11px;
-}
-
-.data-preview strong {
-  font-size: 13px;
-  font-weight: 500;
-}
-</style>
 
 <script setup>
 import { useData } from 'vitepress'
